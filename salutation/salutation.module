@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_menu_link_defaults().
+ *
+ * Routing functionality of hook_menu() has been replaced by new routing system:
+ * https://drupal.org/node/1800686
+ */
+function salutation_menu_link_defaults() {
+  // Basic page on "main" menu.
+  $links['salutation.basic_page'] = array(
+    'link_title' => 'Salutation - Basic page',
+    'description' => '',
+    'route_name' => 'salutation.salutation_page',
+    'menu_name' => 'main',
+  );
+
+  // Add new section (admin/config path) with an other basic page.
+  $links['salutation.admin.be'] = array(
+    'link_title' => 'BelleEpoque section block title',
+    'description' => 'BelleEpoque section block description.',
+    'route_name' => 'salutation.admin_config_be',
+    'parent' => 'system.admin.config',
+  );
+  $links['salutation.admin.be.besub'] = array(
+    'link_title' => 'BelleEpoque page menu title',
+    'description' => 'BelleEpoque page menu description.',
+    'route_name' => 'salutation.admin_config_be_besub',
+    'parent' => 'salutation.admin.be',
+  );
+
+  return $links;
+}

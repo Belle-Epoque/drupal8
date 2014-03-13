@@ -1,0 +1,5 @@
+name: Salutation
+type: module
+description: An example of custum module.
+package: Custom modules
+core: 8.x
