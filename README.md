@@ -1,9 +1,7 @@
---- Drupal8 : modules et tutoriels ---
+# Drupal 8 modules
 
-Vous retrouverez à cet endroit la table des matières qui est en cours de confection.
+These modules are related to the blog of [Belle Epoque Agency](http://horlogerie.agence-belle-epoque.fr/categorie/developpement).
 
-A venir :
-- Création d'une page
-- Création d'un bloc
-- ...
+## Summary of modules
 
+* [salutation](salutation): Basic page module / [original article](http://horlogerie.agence-belle-epoque.fr/drupal8-autopsie-dun-module-de-creation-de-page)
