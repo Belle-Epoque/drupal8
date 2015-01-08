@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: automate-social-menu-header
+label: 'Automate social menu header'
+description: 'top right menu in header'
+locked: false

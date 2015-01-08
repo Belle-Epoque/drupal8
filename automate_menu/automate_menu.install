@@ -1,0 +1,62 @@
+<?php
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Implements hook_install().
+ */
+function automate_menu_install() {
+  // Populate menu.
+  $menu = array(
+    'automate-social-menu-header' => array(
+    array(
+      'title' => 'Facebook',
+        'url' => 'https://www.facebook.com/BelleEpoqueAgence'
+      ),
+      array(
+        'title' => 'Twitter',
+        'url' => 'https://twitter.com/_belle_epoque'
+      ),
+      array(
+        'title' => 'Google+',
+        'url' => 'https://plus.google.com/+AgenceBelleEpoqueParis'
+      ),
+    ),
+  );
+
+  // For each custom menus.
+  foreach ($menu as $menu_name => $menu_link_content) {
+
+    // For each $contact_menu item.
+    foreach ($menu_link_content as $weight => $menu_item) {
+      $menu_link = MenuLinkContent::create(array(
+        'title' => $menu_item['title'],
+          'url' => $menu_item['url'],
+          'menu_name' => $menu_name,
+          'weight' => intval($weight),
+          'bundle' => 'menu_link_content',
+        ));
+
+      $menu_link->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function automate_menu_uninstall() {
+  // Try to delete custom menu.
+  $menus_name = array(
+    'automate-social-menu-header'
+  );
+
+  // For each custom menu.
+  foreach ($menus_name as $menu_name) {
+    $current_menu_loaded = entity_load('menu', $menu_name);
+    if (!empty($current_menu_loaded)) {
+      $current_menu_loaded->delete();
+    }
+  }
+
+}

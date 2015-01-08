@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.automate-social-menu-header
+  module:
+    - language
+    - node
+    - system
+    - user
+  theme:
+    - bartik
+id: automatesocialmenuheader
+theme: bartik
+region: header
+weight: null
+provider: null
+plugin: 'system_menu_block:automate-social-menu-header'
+settings:
+  id: 'system_menu_block:automate-social-menu-header'
+  label: 'Automate social menu header'
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: -1
+    contexts: {  }
+  level: 1
+  depth: 0
+visibility: {  }
