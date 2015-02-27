@@ -7,12 +7,10 @@
 
 namespace Drupal\salutation\Controller;
 
-use Drupal\Core\Controller\ControllerBase;
-
 /**
  * Controller routines for block example routes.
  */
-class SalutationController extends ControllerBase {
+class SalutationController {
   /**
    * A simple controller method to explain what the block example is about.
    */

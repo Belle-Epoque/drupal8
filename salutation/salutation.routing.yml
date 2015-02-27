@@ -1,21 +1,23 @@
-salutation.admin_config_be:
-  path: '/admin/config/be'
+salutation.admin_index:
+  path: 'admin/config/be'
   defaults:
-    _content: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'BelleEpoque section title'
   requirements:
     _permission: 'access administration pages'
+
 salutation.admin_config_be_besub:
-  path: '/admin/config/be/besub'
+  path: 'admin/config/be/besub'
   defaults:
-    _content: '\Drupal\salutation\Controller\SalutationController::salutationAdminPage'
+    _controller: '\Drupal\salutation\Controller\SalutationController::salutationAdminPage'
     _title: 'Salutation admin page title'
   requirements:
     _permission: 'access administration pages'
+
 salutation.salutation_page:
-  path: '/salutation_page'
+  path: 'salutation_page'
   defaults:
-    _content: '\Drupal\salutation\Controller\SalutationController::salutationPage'
+    _controller: '\Drupal\salutation\Controller\SalutationController::salutationPage'
     _title: 'Salutation page title'
   requirements:
     _access: 'TRUE'

@@ -1,7 +1,7 @@
 name: Automate menu
 type: module
 description: 'Custom menus'
-package: Automate
+package: 'Belle Epoque'
 core: 8.x
 dependencies:
   - block

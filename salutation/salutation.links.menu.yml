@@ -1,0 +1,20 @@
+salutation.salutation_page:
+  title: 'Salutation - Basic page'
+  description: ''
+  route_name: salutation.salutation_page
+  menu_name: main
+
+salutation.admin_index:
+  title: 'BelleEpoque section block title link'
+  route_name: salutation.admin_index
+  parent: system.admin_config
+  description: 'BelleEpoque section block description.'
+  position: left
+  weight: -20
+
+salutation.admin_config_be_besub:
+  title: 'BelleEpoque page menu title'
+  parent: salutation.admin_index
+  description: 'BelleEpoque page menu description.'
+  weight: -10
+  route_name: salutation.admin_config_be_besub

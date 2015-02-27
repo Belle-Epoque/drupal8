@@ -1,5 +1,5 @@
 name: Salutation
 type: module
-description: An example of custum module.
-package: Custom modules
+description: Basic page example with section.
+package: 'Belle Epoque'
 core: 8.x
